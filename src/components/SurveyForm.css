@@ -1,0 +1,148 @@
+/* Global styles for the body */
+body {
+  margin: 0;
+  padding: 0;
+  height: 90vh; /* Ensure it covers the full height of the viewport */
+  background-image: url('./logo.png'); /* Path to your background image */
+  background-size:contain; /* Make sure the image covers the entire area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Additional styles for body */
+html {
+  height: 100%; /* Ensure the html element takes full height */
+}
+
+/* Overall form styling */
+.survey-form {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Header styling */
+.survey-form h2 {
+  color: #6a0dad; /* Violet */
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Other styles remain unchanged... */
+
+
+/* Question block styling */
+.question-block {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.question-block:hover {
+  border-color: #6a0dad; /* Violet on hover */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* Styling for option inputs */
+.option-block {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.option-block .MuiTextField-root {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Button styling */
+button {
+  background-color: #6a0dad; /* Violet */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #9b59b6; /* Light purple */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Button for adding options */
+.question-block .MuiButton-root {
+  color: #6a0dad; /* Violet */
+  border: 2px solid #6a0dad;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.question-block .MuiButton-root:hover {
+  background-color: #9b59b6; /* Light purple */
+  color: white;
+}
+
+/* Icon button styling */
+.question-block .MuiIconButton-root:hover {
+  background-color: rgba(106, 13, 173, 0.1); /* Light violet background */
+  color: #6a0dad; /* Violet */
+}
+
+/* Styling for the required checkbox */
+.required-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Horizontal line between questions */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
+}
+
+/* Animation for the form */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.survey-form {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .survey-form {
+      padding: 20px;
+  }
+
+  .option-block {
+      flex-direction: column;
+  }
+
+  .option-block .MuiTextField-root {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+}
